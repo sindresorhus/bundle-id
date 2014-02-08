@@ -1,0 +1,47 @@
+{
+  "name": "bundle-id",
+  "version": "0.0.0",
+  "description": "Get bundle identifier from a bundle name (OS X): Safari => com.apple.Safari",
+  "license": "MIT",
+  "bin": {
+    "bundle-id": "cli.js"
+  },
+  "repository": "sindresorhus/bundle-id",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "osx",
+    "mac",
+    "plist",
+    "applescript",
+    "bundle",
+    "bundleid",
+    "bundlename",
+    "id",
+    "identifier",
+    "CFBundleName",
+    "CFBundleIdentifier",
+    "uti",
+    "cli",
+    "bin"
+  ],
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
