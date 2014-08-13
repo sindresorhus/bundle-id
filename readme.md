@@ -2,12 +2,10 @@
 
 > Get [bundle identifier](https://developer.apple.com/library/Mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/plist/info/CFBundleIdentifier) from a [bundle name](https://developer.apple.com/library/Mac/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/plist/info/CFBundleName) (OS X): `Safari` => `com.apple.Safari`
 
-See [bundle-name](https://github.com/sindresorhus/bundle-name) for the reverse.
-
 
 ## Install
 
-```bash
+```sh
 $ npm install --save bundle-id
 ```
 
@@ -26,21 +24,27 @@ bundleId('Safari', function (err, id) {
 
 ## CLI
 
-You can also use it as a CLI app by installing it globally:
-
-```
-npm install --global bundle-id
+```sh
+$ npm install --global bundle-id
 ```
 
-### Usage
+```sh
+$ bundle-id --help
 
-```
-bundle-id Safari
+  Usage
+    bundle-id <bundle-name>
+
+  Example
+    bundle-id Safari
+    com.apple.Safari
 ```
 
-Which will output `com.apple.Safari`.
+
+## Related
+
+See [bundle-name](https://github.com/sindresorhus/bundle-name) for the inverse.
 
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)
