@@ -1,14 +1,15 @@
 'use strict';
-var execFile = require('child_process').execFile;
+var runApplescript = require('run-applescript');
 
 module.exports = function (bundleName, cb) {
 	var script = 'get id of application "' + bundleName + '"';
 
-	execFile('osascript', ['-e', script], function (err, stdout) {
+	runApplescript(script, function (err, res) {
 		if (err) {
-			return cb(err);
+			cb(err);
+			return;
 		}
 
-		cb(err, stdout.trim());
+		cb(err, res);
 	});
 };
