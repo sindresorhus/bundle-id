@@ -10,6 +10,6 @@ module.exports = function (bundleName, cb) {
 			return;
 		}
 
-		cb(err, res);
+		cb(null, res);
 	});
 };
