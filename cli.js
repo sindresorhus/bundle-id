@@ -1,37 +1,28 @@
 #!/usr/bin/env node
 'use strict';
-var pkg = require('./package.json');
+var meow = require('meow');
 var bundleId = require('./');
-var argv = process.argv.slice(2);
-var input = argv[0];
 
-function help() {
-	console.log([
+var cli = meow({
+	help: [
+		'Usage',
+		'  $ bundle-id <bundle-name>',
 		'',
-		'  ' + pkg.description,
-		'',
-		'  Usage',
-		'    bundle-id <bundle-name>',
-		'',
-		'  Example',
-		'    bundle-id Safari',
-		'    com.apple.Safari'
-	].join('\n'));
+		'Example',
+		'  $ bundle-id Safari',
+		'  com.apple.Safari'
+	]
+});
+
+if (cli.input.length === 0) {
+	console.error('Expected a bundle name');
+	process.exit(1);
 }
 
-if (!input || argv.indexOf('--help') !== -1) {
-	help();
-	return;
-}
-
-if (argv.indexOf('--version') !== -1) {
-	console.log(pkg.version);
-	return;
-}
-
-bundleId(input, function (err, id) {
+bundleId(cli.input[0], function (err, id) {
 	if (err) {
-		throw err;
+		console.error(err.message);
+		process.exit(1);
 	}
 
 	console.log(id);
