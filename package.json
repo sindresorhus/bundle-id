@@ -17,7 +17,7 @@
     "darwin"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "xo && mocha"
   },
   "files": [
     "index.js",
@@ -43,6 +43,12 @@
     "run-applescript": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "envs": [
+      "mocha"
+    ]
   }
 }
