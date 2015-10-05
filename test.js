@@ -1,11 +1,9 @@
-'use strict';
-var assert = require('assert');
-var bundleId = require('./');
+import test from 'ava';
+import fn from './';
 
-it('should get bundle id from bundle name', function (cb) {
-	bundleId('Safari', function (err, id) {
-		console.log('Bundle id:', id);
-		assert.equal(id, 'com.apple.Safari');
-		cb();
-	});
+test(async t => {
+	const id = await fn('Safari');
+
+	console.log('Bundle id:', id);
+	t.is(id, 'com.apple.Safari');
 });

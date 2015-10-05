@@ -15,7 +15,7 @@ $ npm install --save bundle-id
 ```js
 const bundleId = require('bundle-id');
 
-bundleId('Safari', (err, id) => {
+bundleId('Safari').then(id => {
 	console.log(id);
 	//=> 'com.apple.Safari'
 });

@@ -1,15 +1,8 @@
 'use strict';
 var runApplescript = require('run-applescript');
 
-module.exports = function (bundleName, cb) {
+module.exports = function (bundleName) {
 	var script = 'get id of application "' + bundleName + '"';
 
-	runApplescript(script, function (err, res) {
-		if (err) {
-			cb(err);
-			return;
-		}
-
-		cb(null, res);
-	});
+	return runApplescript(script);
 };
