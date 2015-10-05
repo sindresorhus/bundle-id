@@ -5,7 +5,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save bundle-id
 ```
 
@@ -13,22 +13,22 @@ $ npm install --save bundle-id
 ## Usage
 
 ```js
-var bundleId = require('bundle-id');
+const bundleId = require('bundle-id');
 
-bundleId('Safari', function (err, id) {
+bundleId('Safari', (err, id) => {
 	console.log(id);
-	//=> com.apple.Safari
+	//=> 'com.apple.Safari'
 });
 ```
 
 
 ## CLI
 
-```sh
+```
 $ npm install --global bundle-id
 ```
 
-```sh
+```
 $ bundle-id --help
 
   Usage
