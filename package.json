@@ -40,10 +40,15 @@
   ],
   "dependencies": {
     "meow": "^3.4.1",
-    "run-applescript": "^1.0.0"
+    "run-applescript": "^2.0.0"
   },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
   }
 }

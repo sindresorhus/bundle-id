@@ -17,11 +17,6 @@ if (cli.input.length === 0) {
 	process.exit(1);
 }
 
-bundleId(cli.input[0], function (err, id) {
-	if (err) {
-		console.error(err.message);
-		process.exit(1);
-	}
-
+bundleId(cli.input[0]).then(function (id) {
 	console.log(id);
 });
