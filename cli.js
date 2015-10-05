@@ -3,16 +3,14 @@
 var meow = require('meow');
 var bundleId = require('./');
 
-var cli = meow({
-	help: [
-		'Usage',
-		'  $ bundle-id <bundle-name>',
-		'',
-		'Example',
-		'  $ bundle-id Safari',
-		'  com.apple.Safari'
-	]
-});
+var cli = meow([
+	'Usage',
+	'  $ bundle-id <bundle-name>',
+	'',
+	'Example',
+	'  $ bundle-id Safari',
+	'  com.apple.Safari'
+]);
 
 if (cli.input.length === 0) {
 	console.error('Expected a bundle name');
