@@ -9,23 +9,16 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": "cli.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
-  "os": [
-    "darwin"
-  ],
   "scripts": {
     "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
     "osx",
     "plist",
     "applescript",
@@ -39,7 +32,6 @@
     "uti"
   ],
   "dependencies": {
-    "meow": "^3.4.1",
     "run-applescript": "^2.0.0"
   },
   "devDependencies": {
