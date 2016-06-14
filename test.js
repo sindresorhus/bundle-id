@@ -1,6 +1,6 @@
 import test from 'ava';
-import fn from '.';
+import m from '.';
 
 test(async t => {
-	t.is(await fn('Safari'), 'com.apple.Safari');
+	t.is(await m('Safari'), 'com.apple.Safari');
 });
