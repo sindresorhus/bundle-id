@@ -1,4 +1,8 @@
 'use strict';
 const runApplescript = require('run-applescript');
 
-module.exports = bundleName => runApplescript(`get id of application "${bundleName}"`);
+const getId = bundleName => `get id of application "${bundleName}"`;
+
+module.exports = bundleName => runApplescript(getId(bundleName));
+
+module.exports.sync = bundleName => runApplescript.sync(getId(bundleName));
