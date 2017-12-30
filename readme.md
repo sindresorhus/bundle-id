@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save bundle-id
+$ npm install bundle-id
 ```
 
 
@@ -15,11 +15,22 @@ $ npm install --save bundle-id
 ```js
 const bundleId = require('bundle-id');
 
-bundleId('Safari').then(id => {
-	console.log(id);
+(async () => {
+	console.log(await bundleId('Safari'));
 	//=> 'com.apple.Safari'
-});
+})();
 ```
+
+
+## API
+
+### bundleId()
+
+Returns a `Promise<string>` with the bundle ID.
+
+### bundleId.sync()
+
+Returns a `string` with the bundle ID.
 
 
 ## Related
