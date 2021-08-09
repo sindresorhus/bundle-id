@@ -1,10 +1,10 @@
 import test from 'ava';
-import m from '.';
+import {bundleId, bundleIdSync} from './index.js';
 
 test('returns expected id - async', async t => {
-	t.is(await m('Safari'), 'com.apple.Safari');
+	t.is(await bundleId('Safari'), 'com.apple.Safari');
 });
 
 test('returns expected id - sync', t => {
-	t.is(m.sync('Safari'), 'com.apple.Safari');
+	t.is(bundleIdSync('Safari'), 'com.apple.Safari');
 });
